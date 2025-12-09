@@ -7,7 +7,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import os
-from autogen import AssistantAgent, GroupChat, GroupChatManager
+from autogen_agentchat import AssistantAgent, GroupChat, GroupChatManager
+
 from datetime import datetime
 import json
 import re
