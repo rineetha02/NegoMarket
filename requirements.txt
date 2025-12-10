@@ -3,5 +3,6 @@ uvicorn
 pydantic
 python-dotenv
 openai
-autogen-agentchat==0.7.5
-pyautogen==0.10.0
+
+pyautogen~=0.2.0
+autogen-agentchat==0.2.40
