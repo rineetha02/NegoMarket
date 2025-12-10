@@ -1,6 +1,11 @@
 fastapi
 uvicorn
-pyautogen
 pydantic
 python-dotenv
 openai
+
+# AutoGen stack
+autogen-agentchat==0.7.5
+pyautogen==0.10.0
+
+
