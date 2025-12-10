@@ -7,7 +7,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import os
-from autogen.agentchat import AssistantAgent
+from autogen import AssistantAgent
+
 
 
 
