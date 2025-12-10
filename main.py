@@ -4,6 +4,17 @@ Complete implementation with AI negotiation
 """
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI(title="US AI Marketplace")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],   # allow all methods for now
+    allow_headers=["*"],
+)
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import os
@@ -21,7 +32,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-app = FastAPI(title="US AI Marketplace")
 
 # ============================================================================
 # GROQ LLAMA 3.1 CONFIG
