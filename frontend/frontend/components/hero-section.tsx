@@ -4,7 +4,8 @@ import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Sparkles } from "lucide-react"
 import type { Dispatch, SetStateAction } from "react"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
+
 
 interface HeroSectionProps {
   query: string
@@ -32,7 +33,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const randomExample = PLACEHOLDER_EXAMPLES[Math.floor(Math.random() * PLACEHOLDER_EXAMPLES.length)]
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -43,25 +44,25 @@ export default function HeroSection({
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   }
 
-  const floatingVariants = {
+  const floatingVariants: Variants = {
     animate: {
       y: [0, -8, 0],
       transition: {
         duration: 4,
         repeat: Number.POSITIVE_INFINITY,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1],
       },
     },
   }

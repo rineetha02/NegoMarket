@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, type Variants } from "framer-motion"
+
 import { ChevronDown } from "lucide-react"
 
 interface NegotiationTimelineProps {
@@ -16,13 +17,13 @@ interface NegotiationTimelineProps {
 export default function NegotiationTimeline({ logs }: NegotiationTimelineProps) {
   const [isOpen, setIsOpen] = useState(true)
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     open: {
       opacity: 1,
       height: "auto",
       transition: {
         duration: 0.4,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1],
       },
     },
     closed: {
@@ -30,12 +31,12 @@ export default function NegotiationTimeline({ logs }: NegotiationTimelineProps) 
       height: 0,
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1],
       },
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 10 },
     visible: (i: number) => ({
       opacity: 1,

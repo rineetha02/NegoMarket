@@ -19,7 +19,7 @@ export default function BestDealCard({ deal }: BestDealCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="bg-primary/5 border-2 border-primary rounded-xl p-6 md:p-8 space-y-4"
     >
       {/* Badge and Header */}

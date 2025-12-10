@@ -37,7 +37,7 @@ export default function ResultsSection({ data }: ResultsSectionProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="w-full py-12 md:py-16"
     >
       <div className="max-w-4xl mx-auto px-4 space-y-8">

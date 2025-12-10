@@ -1,7 +1,8 @@
 "use client"
 
 import { MessageCircle, Bot, BadgeCheck } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
+
 
 export default function HowItWorksSection() {
   const steps = [
@@ -22,7 +23,7 @@ export default function HowItWorksSection() {
     },
   ]
 
-  const stepVariants = {
+  const stepVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -30,7 +31,7 @@ export default function HowItWorksSection() {
       transition: {
         delay: i * 0.15,
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
       },
     }),
   }
