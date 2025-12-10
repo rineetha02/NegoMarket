@@ -4,8 +4,6 @@ pydantic
 python-dotenv
 openai
 
-# AutoGen stack
-autogen-agentchat==0.7.5
-pyautogen==0.10.0
-
-
+# Old AutoGen (0.2-style) API
+pyautogen==0.2.36
+autogen-agentchat==0.2.36
